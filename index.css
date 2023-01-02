@@ -3,9 +3,14 @@
     font-family: Summer;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -64,6 +69,8 @@ body {
 #activities-wrapper {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     max-width: 720px;
     margin: auto;
 }
@@ -146,6 +153,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     font-family: Summer, cursive;
     color: #FDFCDC;
     border-radius: 14px;
@@ -196,3 +204,10 @@ footer {
 .copyright {
         color: #FDFCDC;
 }
+
+@media (min-width: 768px) {
+    #activities-wrapper, .guide-wrapper {
+        flex-direction: row;
+    }
+}
+
